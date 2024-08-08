@@ -1,0 +1,21 @@
+.content-container {
+  margin: 0 75px;
+  margin-top: 200px;
+}
+
+.text {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.orange {
+  background-color: orangered;
+  border-radius: 50%;
+}

@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Background from "./components/Background/Background";
+import Navbar from "./components/Navbar/Navbar";
+import Content from "./components/Content/Content";
 
 function App() {
+  const text = [
+    { text1: "Dive into", text2: "What You Love" },
+    { text1: "Indulge", text2: "Your Passions" },
+    { text1: "Give into", text2: "Your Passions" },
+  ];
+
+  const [counter, setCounter] = useState(0);
+  const [video, setVideo] = useState(false);
+
+  useEffect(() => {
+    setInterval(() => {
+      setCounter(counter === 2 ? 0 : counter + 1);
+    }, 3000);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Background counter={counter} video={video} />
+      <Navbar />
+      <Content
+        counter={counter}
+        setCounter={setCounter}
+        video={video}
+        setVideo={setVideo}
+        text={text[counter]}
+      />
     </div>
   );
 }

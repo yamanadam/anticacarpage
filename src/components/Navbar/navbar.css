@@ -1,0 +1,24 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+
+.nav-container ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.nav-container ul li {
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: all 1 ease-in-out;
+}
+
+.nav-container ul li:hover {
+  transform: scale(1.1);
+}
