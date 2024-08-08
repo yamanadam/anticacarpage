@@ -13,11 +13,6 @@ function App() {
   const [counter, setCounter] = useState(0);
   const [video, setVideo] = useState(false);
 
-  useEffect(() => {
-    setInterval(() => {
-      setCounter(counter === 2 ? 0 : counter + 1);
-    }, 3000);
-  }, []);
   return (
     <div>
       <Background counter={counter} video={video} />
